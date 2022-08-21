@@ -1,6 +1,6 @@
 import React from "react";
 
-const TutorialList = () => {
+const TutorialList = ({ tutorials }) => {
   return (
     <div className="container mt-4">
       <table class="table table-striped">
