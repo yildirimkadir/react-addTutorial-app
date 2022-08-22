@@ -40,8 +40,8 @@ const Home = () => {
 
   return (
     <div>
-      <AddTutorial />
-      <TutorialList tutorials={tutorials} />
+      <AddTutorial addTutorial={addTutorial} />
+      <TutorialList tutorials={tutorials} deleteTutorial={deleteTutorial} />
     </div>
   );
 };
