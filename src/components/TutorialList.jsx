@@ -1,6 +1,6 @@
 import React from "react";
 
-const TutorialList = ({ tutorials }) => {
+const TutorialList = ({ tutorials, deleteTutorial }) => {
   return (
     <div className="container mt-4">
       <table class="table table-striped">
@@ -13,24 +13,20 @@ const TutorialList = ({ tutorials }) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {tutorials?.map((item) => {
+            const {title, description, id} = item;
+            return (
+              <>
+               <tr key={id}>
+                <th scope="row">{id}</th>
+                <td>{title}</td>
+                <td>{description}</td>
+                <td>@mdo</td>
+              </tr>
+            </>
+
+            )
+          })}
         </tbody>
       </table>
     </div>

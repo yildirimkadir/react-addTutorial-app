@@ -12,6 +12,7 @@ const Home = () => {
     try {
       const { data } = await axios.get(url);
       setTutorials(data);
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -20,13 +21,14 @@ const Home = () => {
     getTutorial();
   }, []);
 
+  //! POST (Create)
   const addTutorial = async (tutorial) => {
     try {
       await axios.post(url, tutorial);
     } catch (error) {
       console.log(error);
     }
-    getTutorials();
+    getTutorial();
   };
 
   const deleteTutorial = async (id) => {
@@ -35,7 +37,7 @@ const Home = () => {
     } catch (error) {
       console.log(error);
     }
-    getTutorials();
+    getTutorial();
   };
 
   return (
