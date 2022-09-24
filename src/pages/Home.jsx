@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const Home = () => {
-  const [tutorials, setTutorials] = useState("");
+  const [tutorials, setTutorials] = useState([]);
   const url = "https://axios-example-cw.herokuapp.com/api/tutorials";
 
   const getTutorial = async () => {
