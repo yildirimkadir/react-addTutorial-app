@@ -22,9 +22,9 @@ const Home = () => {
   }, []);
 
   //! POST (Create)
-  const addTutorial = async (tutorial) => {
+  const addTutorial = async (title, desc) => {
     try {
-      await axios.post(url, tutorial);
+      await axios.post(url, {title:title, description:desc}); // Only one parameter is auch okey(tutorial), but addTutorial in addtutorial.jsx must be object) 
     } catch (error) {
       console.log(error);
     }

@@ -6,7 +6,7 @@ const AddTutorial = ({addTutorial}) => {
   const [desc, setDesc] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTutorial({title: title, description:desc }); // obje olarak olusturdum.
+    addTutorial(title, desc ); // obje olarak olusturdum.
     setTitle("");
     setDesc("");   
   };
@@ -22,6 +22,7 @@ const AddTutorial = ({addTutorial}) => {
           <input
             type="text"
             className="form-control"
+             placeholder="Enter a title"
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -34,6 +35,7 @@ const AddTutorial = ({addTutorial}) => {
           <input
             type="text"
             className="form-control"
+            placeholder="Enter a description"
             id="desc"
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
