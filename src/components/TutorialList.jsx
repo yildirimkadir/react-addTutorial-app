@@ -2,8 +2,9 @@ import React from "react";
 import { FaEdit } from 'react-icons/fa';
 import { AiFillDelete } from 'react-icons/ai';
 import { useState } from "react";
+import EditTutorial from "./EditTutorial";
 
-const TutorialList = ({ tutorials, deleteTutorial}) => {
+const TutorialList = ({ tutorials, deleteTutorial, editTutorial}) => {
   const [editItem, setEditItem] = useState('');
   return (
     <div className="container mt-4">
@@ -45,6 +46,8 @@ const TutorialList = ({ tutorials, deleteTutorial}) => {
           })}
         </tbody>
       </table>
+
+      <EditTutorial editItem={editItem} setEditItem={setEditItem} editTutorial={editTutorial}/>
     </div>
   );
 };

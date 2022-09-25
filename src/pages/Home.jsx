@@ -30,7 +30,7 @@ const Home = () => {
     }
     getTutorial();
   };
-
+ // Delete 
   const deleteTutorial = async (id) => {
     try {
       await axios.delete(`${url}/${id}`);
@@ -40,10 +40,21 @@ const Home = () => {
     getTutorial();
   };
 
+  //! Update (PUT)
+  const editTutorial = async (id,title, description) => {
+    try {
+      await axios.put(`${url}/${id}`, {title:title, description: description});
+    } catch (error) {
+      console.log(error)
+    }
+     getTutorial(); 
+  }
+
+
   return (
     <div>
       <AddTutorial addTutorial={addTutorial} />
-      <TutorialList tutorials={tutorials} deleteTutorial={deleteTutorial} />
+      <TutorialList tutorials={tutorials} deleteTutorial={deleteTutorial} editTutorial={editTutorial}/>
     </div>
   );
 };
