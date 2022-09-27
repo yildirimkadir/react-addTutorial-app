@@ -38,7 +38,7 @@ useEffect(() => {
             type="text"
             className="form-control"
             id="title"
-            value={editTitle}
+            value={editTitle || ""}
             onChange={(e) => setEditTitle(e.target.value)}
           />
           <label for="desc" className="form-label">
@@ -48,13 +48,13 @@ useEffect(() => {
             type="text"
             className="form-control"
             id="description"
-            value={editDesc}
+            value={editDesc || ""}
             onChange={(e) => setEditDesc(e.target.value)}
           />
       </div>
       <div className="modal-footer">
-        <button type="button" className="btn btn-primary" data-bs-dismiss="modal"
-        onClick={handleSubmit}>Submit changes</button>
+        <button type="button" className="btn btn-primary" 
+        onClick={handleSubmit} data-bs-dismiss="modal" >Submit changes</button>
       </div>
     </div>
   </div>
