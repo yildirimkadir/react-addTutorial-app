@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-addtutorial-app/static/css/main.2b4e4793.css",
+    "main.js": "/react-addtutorial-app/static/js/main.18375392.js",
+    "index.html": "/react-addtutorial-app/index.html",
+    "main.2b4e4793.css.map": "/react-addtutorial-app/static/css/main.2b4e4793.css.map",
+    "main.18375392.js.map": "/react-addtutorial-app/static/js/main.18375392.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b4e4793.css",
+    "static/js/main.18375392.js"
+  ]
+}
